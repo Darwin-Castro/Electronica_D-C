@@ -2,98 +2,163 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Tema 4 - CSS Text</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrónica D & C</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
     }
-    header, footer {
-      background-color: #333;
+
+    header {
+      background-color: #1976d2;
       color: #fff;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 0;
+      font-size: 2rem;
     }
+
     main {
-      padding: 2rem;
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 3rem;
       background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-top: 3rem;
     }
+
     section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #1976d2;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      text-align: center;
+      color: #555;
+      line-height: 1.8;
       margin-bottom: 2rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 1rem;
     }
-    pre, code {
-      background-color: #eee;
-      display: block;
+
+    .contenido-imagen {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .contenido-imagen img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .contenido-imagen.izquierda img {
+      order: -1;
+    }
+
+    .creadores {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .creador {
+      background-color: #e3f2fd;
+      padding: 2rem;
+      width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .creador img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .creador h3 {
+      font-size: 1.6rem;
+      color: #1976d2;
+    }
+
+    footer {
+      background-color: #1976d2;
+      color: white;
+      text-align: center;
       padding: 1rem;
-      margin: 1rem 0;
-      white-space: pre;
-      overflow-x: auto;
-    }
-    nav a {
-      display: inline-block;
-      margin: 1rem 0;
-      text-decoration: none;
-      color: #0f4c81;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
+      font-size: 1.1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Tema 4: CSS Text</h1>
+  <h1>Electrónica D & C "Conoce Nuestra Historia"</h1>
 </header>
 
 <main>
+
   <section>
-    <h2>Definición</h2>
-    <p>CSS ofrece propiedades para formatear el texto de una página web, como alineación, decoraciones, transformación de mayúsculas o minúsculas, espaciado, entre otros.</p>
+    <h2>¿Quiénes Somos?</h2>
+    <p>Somos dos estudiantes universitarios de séptimo semestre, apasionados por la tecnología y la innovación. A medida que nos acercamos al final de nuestra carrera, se ha procedido mediante la asignatura de Programación Web en realizar proyecto que combine nuestros conocimientos y nuestro entusiasmo por la electrónica, de esta manera nació Electrónica D & C, una plataforma que busca integrar la educación y el comercio en un solo espacio. Nos entusiasma compartir lo que hemos aprendido hasta ahora, no solo en el aula, sino también a través de experiencias prácticas y proyectos reales.</p>
   </section>
 
   <section>
-    <h2>Sintaxis y uso</h2>
-    <pre><code>selector {
-    text-align: center;       /* left, right, center, justify */
-    text-decoration: none;    /* underline, overline, line-through */
-    text-transform: uppercase;/* uppercase, lowercase, capitalize */
-    letter-spacing: 2px;      /* Espacio entre letras */
-    word-spacing: 4px;        /* Espacio entre palabras */
-}
-</code></pre>
+    <h2>Misión</h2>
+    <div class="contenido-imagen izquierda">
+      <img src="C:\Users\HP\Desktop\Imagenes\mision.jpg" alt="Imagen Misión">
+      <p>Nuestra misión es brindar soluciones tecnológicas innovadoras que mejoren la vida de nuestros clientes, transformando sus experiencias cotidianas mediante el acceso a productos y servicios de vanguardia. Nos esforzamos por ofrecer productos de alta calidad que no solo satisfacen las necesidades actuales, sino que también abren la puerta a nuevas posibilidades tecnológicas. A través de nuestra plataforma, buscamos ser una referencia en calidad, accesibilidad y educación en el ámbito de la electrónica y la computación, ofreciendo a nuestros usuarios recursos educativos, tutoriales prácticos y productos diseñados para potenciar su creatividad y productividad.</p>
+    </div>
   </section>
 
   <section>
-    <h2>Ejemplo</h2>
-    <pre><code>h1 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-p {
-    text-decoration: underline;
-    text-align: justify;
-}
-</code></pre>
+    <h2>Visión</h2>
+    <div class="contenido-imagen">
+      <p>Nuestra visión es convertirnos en una plataforma líder en la venta y educación tecnológica, acercando la electrónica y la computación a más personas, sin importar su nivel de experiencia. Aspiramos a ser el referente principal en la industria, brindando soluciones tecnológicas que no solo mejoren la vida cotidiana de nuestros usuarios, sino que también empoderen a las personas para que comprendan y dominen el mundo digital. Nos vemos como un puente entre la tecnología avanzada y quienes buscan aprender a través de ella, creando una comunidad que valore el conocimiento y la innovación.</p>
+      <img src="C:\Users\HP\Desktop\Imagenes\vision.jpg" alt="Imagen Visión">
+    </div>
   </section>
 
-  <nav>
-    <a href="index.html">Volver al Índice</a>
-  </nav>
+  <section>
+    <h2>👥 Autores</h2>
+    <div class="creadores">
+      <div class="creador">
+        <img src="C:\Users\HP\Desktop\Imagenes\castro.jpg" alt="Darwin Castro">
+        <h3>Darwin Castro</h3>
+        <p>Estudiante universitario en su último semestre, apasionado por la tecnología y la innovación. Cofundador de Electrónica D & C, con el objetivo de acercar la tecnología a más personas mediante educación y venta de productos electrónicos.</p>
+      </div>
+      <div class="creador">
+        <img src="C:\Users\HP\Desktop\Imagenes\carlos.jpg" alt="Carlos Armijos">
+        <h3>Carlos Armijos</h3>
+        <p>Apasionado por la electrónica y la computación, está terminando su carrera y ha desarrollado esta plataforma para compartir conocimientos y facilitar el acceso a la tecnología. Su meta es consolidar Electrónica D & C como un referente en el sector.</p>
+      </div>
+    </div>
+  </section>
+  
+<nav>
+    <a href="index.html">Volver al Inicio</a>
+ </nav>
+
 </main>
 
 <footer>
-  <p>Clase de Programación Web - Tema 4</p>
+  <p>2025 Electrónica D & C - Todos los derechos reservados</p>
 </footer>
 
 </body>
