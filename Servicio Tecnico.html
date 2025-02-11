@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Servicio Técnico - Electrónica D & C</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e3f2fd;
+      color: #212121;
+      line-height: 1.6;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, #0d47a1, #1976d2);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    main {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+    .servicio {
+      background: #f5f5f5;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+    .servicio img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .cta-button {
+      background-color: #1976d2;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      background: white;
+      margin: 15% auto;
+      padding: 20px;
+      width: 50%;
+      border-radius: 10px;
+    }
+    .close {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+    }
+	
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1976d2;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Servicio Técnico - Electrónica D & C</h1>
+    <p>Reparación y mantenimiento de computadoras, laptops, celulares y más.</p>
+  </header>
+  <main>
+    <h2>Nuestros Servicios Destacados</h2>
+    <div class="grid-container">
+      <div class="servicio" onclick="mostrarModal('Reparación de Computadoras','En nuestro servicio técnico, nos encargamos de reparar tanto el hardware como el software de tu computadora. Solucionamos problemas de componentes como disco duro, memoria RAM, pantalla, teclado y tarjeta gráfica, además eliminamos virus, optimizamos el sistema operativo y actualizamos tus programas para mejorar el rendimiento de tu equipo.','pc-repair.jpg')">
+        <img src="C:\Users\HP\Desktop\Imagenes\reparacion.jpeg" alt="Reparación de Computadoras">
+        <h3>Reparación de Computadoras</h3>
+        <button class="cta-button">Ver Detalles</button>
+      </div>
+      <div class="servicio" onclick="mostrarModal('Reparación de Celulares', 'En nuestro servicio técnico de celulares, nos especializamos en reparar todo tipo de fallas, desde pantallas rotas y cambios de batería hasta problemas con la cámara, micrófono o carga. También solucionamos errores de software, como bloqueos, lentitud o reinicios inesperados. Realizamos reparaciones rápidas y de calidad, utilizando repuestos originales para asegurar un óptimo funcionamiento.', 'phone-repair.jpg')">
+        <img src="C:\Users\HP\Desktop\Imagenes\celularrepar.jpg" alt="Reparación de Celulares">
+        <h3>Reparación de Celulares</h3>
+        <button class="cta-button">Ver Detalles</button>
+      </div>
+      <div class="servicio" onclick="mostrarModal('Mantenimiento de Laptops', 'El mantenimiento de portátiles es esencial para prolongar su vida útil y mantener un rendimiento óptimo. Ofrecemos servicios de limpieza interna y externa, eliminación de polvo, optimización de software y actualización de controladores. Además, revisamos el estado de la batería, el sistema de refrigeración y la integridad de los componentes internos. Con un mantenimiento preventivo regular, tu portátil funcionará de manera más eficiente, evitando fallos inesperados y mejorando su velocidad.', 'Mantenimiento de Laptops.jpg')">
+        <img src="C:\Users\HP\Desktop\Imagenes\mantlaptop.jpeg" alt="Mantenimiento de Laptops">
+        <h3>Mantenimiento de Laptops</h3>
+        <button class="cta-button">Ver Detalles</button>
+      </div>
+      <div class="servicio" onclick="mostrarModal('Recuperación de Datos', 'Ofrecemos un servicio profesional de recuperación de datos para discos duros, memorias USB, tarjetas SD y otros dispositivos de almacenamiento. Ya sea por fallos físicos, errores de software o eliminación accidental, nuestro equipo de expertos utiliza herramientas avanzadas para recuperar tus archivos importantes, como documentos, fotos, videos y más. Garantizamos un proceso seguro y confidencial, trabajando para recuperar la mayor cantidad de datos posibles sin comprometer su integridad.', 'data-recovery.jpg')">
+        <img src="C:\Users\HP\Desktop\Imagenes\recudatos.jpg" alt="Recuperación de Datos">
+        <h3>Recuperación de Datos</h3>
+        <button class="cta-button">Ver Detalles</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Electrónica D & C - Tu solución en tecnología</p>
+  </footer>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <img id="modal-img" src="" alt="" style="width:100%; border-radius: 10px;">
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+  <script>
+    function mostrarModal(titulo, descripcion, imagen) {
+      document.getElementById('modal-title').innerText = titulo;
+      document.getElementById('modal-desc').innerText = descripcion;
+      document.getElementById('modal-img').src = imagen;
+      document.getElementById('modal').style.display = 'block';
+    }
+    function cerrarModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</main>
+</body>
+</html>
+
+
